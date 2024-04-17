@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>インラインJS (少量のDOM操作)</title>
+</head>
+<body>
+  <h1>これはインラインのJavaScriptを使用するページです。</h1>
+  <p>このページでは少量のDOM操作が行われます。</p>
+  <div id="container"></div>
+
+  <script>
+    const container = document.getElementById("container");
+
+    for (let i = 0; i < 5; i++) {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = `これは動的に追加された段落 ${i + 1} です。`;
+      container.appendChild(paragraph);
+    }
+  </script>
+</body>
+</html>
